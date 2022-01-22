@@ -1,0 +1,41 @@
+
+
+/* -- Poppins Font Family -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* -========- BASE -=======- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -- VARIABLES -- */
+:root {
+    --primary-clr: #060085;
+    --white-clr: #F5F5FF;
+    --txt-clr: #5D55FF;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    color: var(--txt-clr);
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ------ */
+body {
+    color: var(--primary-clr);
+    background-color: var(--white-clr);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------------ HEADER ----------------- */
