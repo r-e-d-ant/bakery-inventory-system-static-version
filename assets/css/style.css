@@ -18,6 +18,7 @@
     --white-clr: #F5F5FF;
     --txt-clr: #5D55FF;
     --header-bg: #E5E5FF;
+    --footer-bg: #9996CF;
     --one-week-more-bg: #86B561;
     --in-three-days-bg: #7E7BC2;
     --input-border-clr: #E5E5EA;
@@ -75,7 +76,7 @@ header {
 }
 @media screen and (min-width: 442px) {
     .nav-bar {
-        justify-content: center;
+        justify-content: flex-start;
     }
     .nav-item {
         margin-right: 3rem;
@@ -99,6 +100,10 @@ header {
 }
 .nav-link {
     font-size: 1rem;
+    transition: color 300ms;
+}
+.nav-item:hover .nav-link {
+    color: var(--primary-clr);
 }
 
 /* ------------=== MAIN ===----------------- */
@@ -119,6 +124,11 @@ header {
     display: flex;
     flex-direction: column;
     margin-bottom: 6rem;
+    border: 1px solid var(--input-border-clr);
+    transition: box-shadow 300ms;
+}
+.product:hover {
+    box-shadow: 3px 3px 5px rgba(6, 0, 133, 0.2);
 }
 @media screen and (min-width: 220px) {
     .product {
@@ -148,7 +158,7 @@ header {
 .product .right-side {
     width: 100%;
     padding: 2rem 0;
-    border: 1px solid var(--input-border-clr);
+    /* border: 1px solid var(--input-border-clr); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,11 +188,13 @@ header {
     font-weight: 600;
 }
 .weight .amount i {
-    font-size: .8rem;
+    font-size: .9rem;
     font-style: normal;
     font-weight: 200;
+    margin-left: .2rem;
 }
-.weight p {
+.product
+.right-side .weight .reste {
     font-size: .9rem;
     font-weight: 200;
 }
@@ -194,4 +206,35 @@ header {
 }
 .product .in-three-days-bg {
     background-color: var(--in-three-days-bg);
+}
+
+
+/* ------- Footer ------ */
+#footer {
+    background-color: var(--footer-bg);
+}
+.developer-portfolio {
+    color: var(--white-clr);
+    font-size: .8rem;
+}
+.developer-portfolio .portfolio-link {
+    color: var(--txt-clr);
+    transition: color 300ms;
+    position: relative;
+}
+.developer-portfolio .portfolio-link::before {
+    content: "";
+    background-color: var(--primary-clr);
+    width: 100%;
+    height: .1rem;
+    position: absolute;
+    bottom: -.1rem;
+    transform: scaleX(0);
+    transition: transform 300ms;
+}
+.developer-portfolio .portfolio-link:hover::before {
+    transform: scaleX(1);
+}
+.developer-portfolio .portfolio-link:hover {
+    color: var(--primary-clr);
 }
