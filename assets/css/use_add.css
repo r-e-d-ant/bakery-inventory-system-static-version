@@ -70,11 +70,12 @@
     min-height: 2rem;
     width: 4rem;
     border: none;
-    color: var(--white-clr);
+    color: var(--txt-clr);
     border-radius: 2px;
-    background-color: var(--txt-clr);
-    transition: background 300ms;
+    background-color: var(--header-bg);
+    transition: background 300ms, color 300ms;
 }
 .use-add-form .add-use-btn:hover {
+    color: var(--white-clr);
     background-color: var(--primary-clr);
 }
