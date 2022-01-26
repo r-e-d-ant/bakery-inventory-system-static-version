@@ -3,15 +3,6 @@
 /* -- Poppins Font Family -- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* -========- BASE -=======- */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* -- VARIABLES -- */
 :root {
     --primary-clr: #060085;
@@ -23,7 +14,20 @@
     --in-three-days-bg: #7E7BC2;
     --input-border-clr: #E5E5EA;
 }
+/* ------------- */
 
+/* -========- BASE -=======- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    background-color: tomato;
+}
 ul {
     list-style: none;
 }
@@ -57,6 +61,9 @@ body {
     color: var(--primary-clr);
     background-color: var(--white-clr);
     font-family: 'Poppins', sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ------------=== HEADER ===----------------- */
@@ -114,7 +121,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content: center; */
     gap: 2rem;
 }
 .product {
@@ -158,9 +164,7 @@ header {
 .product .right-side {
     width: 100%;
     padding: 2rem 0;
-    /* border: 1px solid var(--input-border-clr); */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -175,15 +179,13 @@ header {
         width: 150px;
     }
 }
-.product
 .left-side .name {
     color: var(--white-clr);
     font-size: 1.1rem;
     font-weight: 400;
     margin-top: .5rem;
 }
-.product
-.right-side .weight .amount {
+.weight .amount {
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -193,12 +195,10 @@ header {
     font-weight: 200;
     margin-left: .2rem;
 }
-.product
-.right-side .weight .reste {
+.weight .reste {
     font-size: .9rem;
     font-weight: 200;
 }
-
 
 /* -- in three days --- */
 .less-three-days {
@@ -211,6 +211,7 @@ header {
 
 /* ------- Footer ------ */
 #footer {
+    margin-top: auto;
     background-color: var(--footer-bg);
 }
 .developer-portfolio {

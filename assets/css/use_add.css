@@ -1,0 +1,80 @@
+
+/* ---- product add ---- */
+/* .product-use-add {
+    
+} */
+@media screen and (min-width: 678px) {
+    .product-use-add {
+        width: 300px;
+    }
+}
+.product .right-side-use-add {
+    padding: 2rem 0;
+    padding-left: .5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+@media screen and (min-width: 678px) {
+    .product .right-side-use-add {
+        width: 180px;
+    }
+}
+.right-side-use-add {
+    position: relative;
+}
+.weight-add {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    display: flex;
+    align-items: flex-end;
+}
+.weight-add .amount {
+    font-size: 1.1rem;
+}
+.weight-add .amount i {
+    font-size: .7rem;
+}
+.weight-add .reste {
+    font-size: .8rem;
+    margin-left: .4rem;
+}
+
+/* -- add - use form stylings -- */
+.add-use-form-container {
+    margin-top: 1.7rem;
+}
+.use-add-form {
+    margin-bottom: .5rem;
+}
+.use-add-form:last-child {
+    margin-bottom: 0;
+}
+.use-add-form .add-use-input {
+    font-size: 1.1rem;
+    min-height: 2rem;
+    width: 5rem;
+    padding: 0 .3rem;
+    outline: none;
+    color: var(--primary-clr);
+    border: thin solid var(--input-border-clr);
+    border-radius: 2px;
+    transition: border 300ms;
+}
+.use-add-form .add-use-input:focus {
+    border: thin solid var(--footer-bg);
+}
+.use-add-form .add-use-btn {
+    cursor: pointer;
+    font-size: 1.1rem;
+    min-height: 2rem;
+    width: 4rem;
+    border: none;
+    color: var(--white-clr);
+    border-radius: 2px;
+    background-color: var(--txt-clr);
+    transition: background 300ms;
+}
+.use-add-form .add-use-btn:hover {
+    background-color: var(--primary-clr);
+}
