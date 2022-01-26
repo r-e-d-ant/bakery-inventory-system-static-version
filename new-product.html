@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/new_product.css">
     <title>New product</title>
 </head>
 <body>
@@ -12,12 +13,47 @@
         <ul class="nav-bar">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="use-add.html" class="nav-link">Use/Add</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Register new</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">New Product</a></li>
         </ul>
     </header>
     <!-- ---- HEADER ---- -->
     <main id="main" class="container">
-        <h1>Hello</h1>
+        <div class="new-p-form-container">
+            <fieldset class="form-fieldset">
+                <legend>Product</legend>
+
+                <form class="new-p-form">
+                    <div class="top-form">
+                        <div class="form-control">
+                            <label for="product-name" class="input-label">Name</label>
+                            <input type="text" class="top-form-input" id="product-name" placeholder="banana">
+                        </div>
+                        <div class="form-control">
+                            <label for="product-unit" class="input-label">Unit</label>
+                            <input type="text" list="products-units" class="top-form-input" id="product-unit" placeholder="Pcs">
+                            <datalist id="products-units">
+                                <option value="kg">Killograms (Kg)</option>
+                                <option value="L">Liter (L)</option>
+                                <option value="pcs">Pieces (Pcs)</option>
+                            </datalist>
+                        </div>
+                        <div class="form-control">
+                            <label for="product-value" class="input-label">Value</label>
+                            <input type="text" class="top-form-input" id="product-value" placeholder="0">
+                        </div>
+                        <div class="form-control">
+                            <label for="product-lifel" class="input-label">Life long</label>
+                            <input type="text" list="product-lifelongs" class="top-form-input" id="product-lifel" placeholder="In 1 week">
+                            <datalist id="product-lifelongs">
+                                <option value="In 1 week">Expiration > In 1 week</option>
+                                <option value="In 3 days">Expiration > In 3 days</option>
+                            </datalist>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-product-btn">Save Product</button>
+                </form>
+            </fieldset>
+        </div>
     </main>
     <footer id="footer" class="container">
         <p class="developer-portfolio">Developed by <a href="https://www.thierrymugisha.me/" target="_blank" class="portfolio-link" title="developer portfolio link">Thierry M.</a></p>

@@ -1,0 +1,90 @@
+
+.new-p-form-container {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+.form-fieldset {
+    width: 50%;
+    border: thin solid var(--input-border-clr);
+    border-radius: 2px;
+}
+.form-fieldset legend {
+    font-size: 1.1rem;
+    padding: 0 .5rem;
+}
+.new-p-form {
+    padding: 2rem 2rem;
+}
+@media screen and (min-width: 642px) {
+    .form-fieldset {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 744px) {
+    .form-fieldset {
+        width: 85%;
+    }
+}
+@media screen and (min-width: 890px) {
+    .form-fieldset {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1028px) {
+    .form-fieldset {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1220px) {
+    .form-fieldset {
+        width: 50%;
+    }
+}
+.top-form {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+.input-label {
+    font-size: 1rem;
+    margin-bottom: .2rem;
+}
+.top-form-input {
+    min-height: 2.5rem;
+    width: 15rem;
+    font-size: 1rem;
+    padding: 0 .5rem;
+    outline: none;
+    color: var(--primary-clr);
+    border: thin solid var(--input-border-clr);
+    border-radius: 2px;
+    transition: border 300ms;
+}
+.top-form-input::placeholder {
+    color: var(--input-border-clr);
+}
+.top-form-input:focus {
+    border: thin solid var(--footer-bg);
+}
+
+/* -- save product button -- */
+.submit-product-btn {
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 2px;
+    padding: .8rem 1rem;
+    color: var(--white-clr);
+    background-color: var(--txt-clr);
+    transition: 300ms background;
+}
+.submit-product-btn:hover {
+    background-color: var(--primary-clr);
+}
