@@ -166,6 +166,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+.product-setting-icon {
+    font-size: 1.5rem;
+    color: var(--footer-bg);
+    transition: transform 500ms ease-out;
+}
+.product-setting-icon:hover {
+    transform: rotate(180deg);
+}
+.product-setting {
+    cursor: pointer;
+    position: absolute;
+    top: .8rem;
+    right: .8rem;
 }
 
 @media screen and (min-width: 678px) {
@@ -176,6 +191,13 @@ header {
     .product .right-side {
         padding: 0;
         width: 150px;
+    }
+    .product-setting-icon {
+        font-size: 1.2rem;
+    }
+    .product-setting {
+        top: .5rem;
+        right: .5rem;
     }
 }
 .left-side .name {
