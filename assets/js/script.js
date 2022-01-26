@@ -1,7 +1,9 @@
 
-const settingIcon = document.querySelector('.setting-icon-container');
-const settingModal = document.querySelector('.setting-modal-container');
+const settingIcons = document.querySelectorAll('.setting-icon-container');
+const settingModals = document.querySelectorAll('.setting-modal-container');
 
-settingIcon.addEventListener('click', () => {
-    settingModal.classList.toggle('show-setting-modal')
+settingIcons.forEach(settingIcon => {
+    settingIcon.addEventListener('click', () => {
+        settingIcon.parentElement.previousElementSibling.classList.toggle('show-setting-modal')
+    })
 })
