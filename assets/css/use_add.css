@@ -56,7 +56,7 @@
     width: 5rem;
     padding: 0 .3rem;
     outline: none;
-    color: var(--primary-clr);
+    color: var(--input-txt-clr);
     border: thin solid var(--input-border-clr);
     border-radius: 2px;
     transition: border 300ms;
@@ -70,12 +70,12 @@
     min-height: 2rem;
     width: 4rem;
     border: none;
-    color: var(--txt-clr);
+    color: var(--input-btn-clr);
     border-radius: 2px;
-    background-color: var(--header-bg);
+    background-color: var(--input-btn-bg);
     transition: background 300ms, color 300ms;
 }
 .use-add-form .add-use-btn:hover {
-    color: var(--white-clr);
-    background-color: var(--primary-clr);
+    color: var(--input-btn-clr-alt);
+    background-color: var(--in-three-days-bg);
 }

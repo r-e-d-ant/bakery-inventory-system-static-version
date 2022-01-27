@@ -61,7 +61,7 @@
     font-size: 1rem;
     padding: 0 .5rem;
     outline: none;
-    color: var(--primary-clr);
+    color: var(--input-txt-clr);
     border: thin solid var(--input-border-clr);
     border-radius: 2px;
     transition: border 300ms;
@@ -81,10 +81,11 @@
     border: none;
     border-radius: 2px;
     padding: .8rem 1rem;
-    color: var(--white-clr);
-    background-color: var(--txt-clr);
-    transition: 300ms background;
+    color: var(--input-btn-clr);
+    background-color: var(--input-btn-bg);
+    transition: 300ms background, 300ms color;
 }
 .submit-product-btn:hover {
-    background-color: var(--primary-clr);
+    color: var(--input-btn-clr-alt);
+    background-color: var(--in-three-days-bg);
 }

@@ -4,17 +4,45 @@
 
 /* -- VARIABLES -- */
 :root {
-    --primary-clr: #060085;
-    --white-clr: #F5F5FF;
-    --txt-clr: #5D55FF;
-    --header-bg: #E5E5FF;
-    --footer-bg: #9996CF;
-    --one-week-more-bg: #86B561;
-    --in-three-days-bg: #7E7BC2;
-    --input-border-clr: #E5E5EA;
+    --primary-clr: hsl(240, 100%, 98%);
+    --white-clr: hsl(243, 37%, 25%);
+    --bg-clr: var(--white-clr);
+    --txt-clr: var(--primary-clr);
+    --header-bg: hsl(243, 37%, 22%);
+    --footer-bg: var(--header-bg);
+
+    --product-name-txt-clr: var(--primary-clr);
+
+    --one-week-more-bg: hsl(94, 36%, 55%);
+    --in-three-days-bg: hsl(243, 37%, 62%);
+    --input-border-clr: hsl(240, 11%, 91%);
+
+    --input-txt-clr: var(--white-clr);
+    --input-btn-clr: var(--input-txt-clr);
+    --input-btn-clr-alt: var(--primary-clr);
+    --input-btn-bg: hsl(240, 100%, 95%);
+
+    --theme-toggle-bg: var(--white-clr);
+    --theme-toggle-bg-alt: hsl(243, 37%, 30%);
+
     --warning-clr: hsl(50, 98%, 74%);
+    --warning-txt-clr: var(--white-clr);
     --danger-clr: hsl(4, 84%, 56%);
+    --danger-txt-clr: var(--primary-clr);
     --warning-clr-alt: hsl(50, 98%, 50%);
+}
+.light-mode {
+    --primary-clr: hsl(243, 37%, 25%);
+    --bg-clr: hsl(240, 100%, 98%);
+    --white-clr: var(--bg-clr);
+    --txt-clr: hsl(243, 100%, 67%);
+    --header-bg: hsl(240, 100%, 95%);
+    --footer-bg: hsl(243, 37%, 70%);
+
+    --theme-toggle-bg: var(--bg-clr);
+    --theme-toggle-bg-alt: hsl(243, 37%, 90%);
+
+    --input-btn-bg: hsl(240, 100%, 90%);
 }
 /* -------------- */
 
@@ -66,11 +94,37 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    transition: 300ms background ease-in;
 }
 
 /* ------------=== HEADER ===----------------- */
 header {
     background-color: var(--header-bg);
+    position: relative;
+    transition: 300ms background ease-in;
+}
+.white-darkmode-toggler-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    padding: .5rem 0;
+    background-color: var(--theme-toggle-bg);
+    border: thin solid var(--input-border-clr);
+    position: absolute;
+    right: 0;
+    bottom: -2.6rem;
+    transition: 300ms background;
+}
+.white-darkmode-toggler-container:hover {
+    background-color: var(--theme-toggle-bg-alt);
+}
+.bx-sun {
+    font-size: 1.5rem;
+}
+.bx-moon {
+    font-size: 1.4rem;
 }
 .nav-bar {
     display: flex;
@@ -174,7 +228,7 @@ header {
 }
 .setting-icon {
     font-size: 1.5rem;
-    color: var(--footer-bg);
+    color: var(--input-btn-bg);
     transition: transform 500ms ease-out;
 }
 .setting-icon:hover {
@@ -218,7 +272,7 @@ header {
     transition: background-color 300ms, color 300ms;
 }
 .edit-btn {
-    color: var(--primary-clr);
+    color: var(--warning-txt-clr);
     background-color: var(--warning-clr);
 }
 .edit-btn:hover {
@@ -230,7 +284,7 @@ header {
     border: thin solid var(--danger-clr);
 }
 .delete-btn:hover {
-    color: var(--white-clr);
+    color: var(--danger-txt-clr);
     background-color: var(--danger-clr);
 }
 
@@ -258,7 +312,7 @@ header {
     }
 }
 .left-side .name {
-    color: var(--white-clr);
+    color: var(--product-name-txt-clr);
     font-size: 1.1rem;
     font-weight: 400;
     margin-top: .5rem;
@@ -292,12 +346,13 @@ header {
     background-color: var(--footer-bg);
 }
 .developer-portfolio {
-    color: var(--white-clr);
+    color: var(--product-name-txt-clr);
     font-size: .8rem;
 }
 .developer-portfolio .portfolio-link {
     color: var(--txt-clr);
     transition: color 300ms;
+    text-decoration: underline;
     position: relative;
 }
 .developer-portfolio .portfolio-link::before {
@@ -315,4 +370,5 @@ header {
 }
 .developer-portfolio .portfolio-link:hover {
     color: var(--primary-clr);
+    text-decoration: none;
 }
