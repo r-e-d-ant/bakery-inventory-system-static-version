@@ -1,7 +1,7 @@
 # bakery-inventory-static-version
 bakery, a bakery inventory system static version
 
-Take look at it live: https://cake-bakery-inventory-system.netlify.app
+Take look at it live: https://bakery-inventory-system.netlify.app
 
 * built using 
 ```
