@@ -80,6 +80,12 @@ img {
 .container {
     padding: 1rem .5rem;
 }
+.gap-2rem {
+    gap: 2rem;
+}
+.margin-2rem {
+    margin: 2rem;
+}
 @media screen and (min-width: 442px) {
     .container {
         padding: 1rem 2rem;
@@ -177,7 +183,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 2rem;
 }
 .product {
     width: 100%;
