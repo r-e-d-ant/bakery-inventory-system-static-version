@@ -56,7 +56,6 @@ themeTogglers.addEventListener("click", () => {
 
 /* ---- detect browser version then use margins instead of gap ---- :( */
 
-const platFormName = platform.name;
 const platFormVersion = (platform.version).slice(0, 2);
 
 const products = document.querySelectorAll('.product')
@@ -64,7 +63,6 @@ const products = document.querySelectorAll('.product')
 const plateformsChromeEdge = ["Chrome", "Edge"]
 products.forEach(product => {
   if(product.classList.contains('margin-2rem') && platFormVersion >= 97) {
-    console.log("Hooray! Yes i'm over 83 Version")
     product.parentElement.style.margin = 0;
     product.classList.remove("margin-2rem");
     product.parentElement.classList.add("gap-2rem");
