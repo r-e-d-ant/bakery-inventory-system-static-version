@@ -84,7 +84,7 @@ img {
     gap: 2rem;
 }
 .margin-2rem {
-    margin: 2rem;
+    margin: 1rem;
 }
 @media screen and (min-width: 442px) {
     .container {
@@ -183,6 +183,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin: -1rem;
 }
 .product {
     width: 100%;
@@ -190,7 +191,6 @@ header {
     border-radius: 2px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 6rem;
     border: 1px solid var(--input-border-clr);
     position: relative;
     transition: box-shadow 300ms;
@@ -201,7 +201,7 @@ header {
 @media screen and (min-width: 220px) {
     .product {
         flex-direction: row;
-        margin: 0;
+        /* margin: 0; */
     }
 }
 @media screen and (min-width: 678px) {
