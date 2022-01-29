@@ -60,7 +60,6 @@ const platFormVersion = (platform.version).slice(0, 2);
 
 const products = document.querySelectorAll('.product')
 
-const plateformsChromeEdge = ["Chrome", "Edge"]
 products.forEach(product => {
   if(product.classList.contains('margin-2rem') && platFormVersion >= 97) {
     product.parentElement.style.margin = 0;
